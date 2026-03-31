@@ -1,3 +1,14 @@
+> [!IMPORTANT]
+> Ce projet n'est plus maintenu. Le développement s'arrête ici pour des raisons politiques liées aux activités de Spotify.
+> Renseignez-vous, faites vos propres choix.
+> Voir plus à la section "Pourquoi ce projet n'est plus maintenu" à la fin de ce README.
+
+> [!IMPORTANT]
+> This project is no longer maintained. Development stops here due to political reasons related to Spotify's activities.
+> Do your own research, make your own choices.
+> See more at the section "Why this project is no longer maintained" at the end of this README.
+
+
 # spotCLI
 
 A lightweight CLI tool to search Spotify music and add tracks to your liked songs without opening the Spotify app or website.
@@ -75,7 +86,7 @@ Create a `.env` file in the project directory:
 cat > .env << EOF
 CLIENT_ID=your_spotify_client_id_here
 CLIENT_SECRET=your_spotify_client_secret_here
-REDIRECT_URI=http://localhost:8888/callback
+REDIRECT_URI=http://127.0.0.1:8888/callback
 EOF
 ```
 
@@ -102,13 +113,6 @@ spotCLI
 # or
 spotCLI -i
 ```
-
-Menu options:
-- `1` - Exit
-- `2` - Users Options
-- `3` - View saved tracks
-- `4` - Search for artists
-- `5` - Search for tracks
 
 ### Command Line Mode
 
@@ -153,58 +157,6 @@ make help     # Show all available commands
 | `--list` | `-l` | List your saved tracks |
 | `--interactive` | `-i` | Start interactive mode |
 | `--help` | `-h` | Show help message |
-
-## Examples
-
-```bash
-# Search for a track and save it
-spotCLI "Glimpse of Us"
-
-# Search with artist name
-spotCLI "Daft Punk Get Lucky"
-
-# View your library (first 20 tracks)
-spotCLI --list
-
-# Interactive menu
-spotCLI -i
-```
-
-## Project Structure
-
-```
-spotCLI/
-├── src/
-│   ├── spotify/
-│   │   ├── spotify_utils.c
-│   │   ├── spotify_search.c
-│   │   ├── spotify_playlist.c
-│   │   ├── spotify_player.c
-│   │   ├── spotify_parsers.c
-│   │   ├── spotify_library.c
-│   │   ├── spotify_http.c
-│   │   └── spotify_auth.c
-│   ├── main.c
-│   ├── dotenv.c
-│   ├── callback_server.c
-│   └── auth.c
-├── include/
-│   ├── spotify/
-│   │   ├── spotify_search.h
-│   │   ├── spotify_playlist.h
-│   │   ├── spotify_player.h
-│   │   ├── spotify_library.h
-│   │   ├── spotify_internal.h
-│   │   ├── spotify_auth.h
-│   │   └── spotify_api.h
-│   ├── dotenv.h
-│   ├── auth.h
-│   └── api.h
-├── spotCLI*
-├── README.md
-├── Makefile
-└── LICENSE
-```
 
 ## Configuration Files
 
@@ -327,10 +279,6 @@ The app requests the following Spotify scopes:
 
 ---
 
-**ncurses would be ideal** for rendering these with keyboard navigation and mouse support!
-
----
-
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
@@ -350,3 +298,35 @@ MIT License - see LICENSE file for details
 - Built with [libcurl](https://curl.se/libcurl/) for HTTP requests
 - JSON parsing with [json-c](https://github.com/json-c/json-c)
 - [Spotify Web API](https://developer.spotify.com/documentation/web-api/)
+
+# Pourquoi ce projet est archivé
+
+Plusieurs éléments ont motivé l'arrêt du développement :
+
+- **Investissements militaires** : Daniel Ek, fondateur de Spotify, est chairman de [Helsing](https://www.helsing.ai/), une entreprise d'IA militaire allemande dans laquelle il a personnellement investi. Helsing a des contrats avec Rheinmetall, Saab et Airbus — des entreprises impliquées dans des livraisons d'armes à Israël. ([Les Inrocks](https://www.lesinrocks.com/musique/le-pdg-de-spotify-investit-600-millions-deuros-dans-larmement-677863-04-08-2025/), [Le Figaro](https://www.lefigaro.fr/musique/fuck-spotify-les-investissements-de-daniel-ek-dans-le-secteur-de-l-armement-font-enrager-artistes-et-abonnes-20250730))
+
+- **Publicités ICE** : En octobre 2025, Spotify a diffusé des publicités de recrutement pour l'ICE (Immigration and Customs Enforcement) américaine, refusant ensuite de modifier sa politique publicitaire. ([The Guardian](https://www.theguardian.com/technology/2026/jan/09/spotify-no-longer-running-ice-recruitment-ads-after-us-government-campaign-ends))
+
+- **Publicités pour les prisons israéliennes** : Spotify a diffusé des publicités pour le service pénitentiaire israélien, sous la tutelle du ministre Itamar Ben-Gvir.
+
+- **Partenariat avec Partner Communications** : Spotify a lancé en Israël via un accord avec cette entreprise listée dans la base de données de l'ONU pour son implication dans les colonies illégales.
+
+Pour aller plus loin : [BDS Movement – Boycott Spotify](https://bdsmovement.net/boycott-spotify) · [Reddit r/spotify](https://www.reddit.com/r/spotify/comments/1ll26zd/spotifys_blood_money_funding_death_with_art/)
+
+**Chacun fait ce qu'il veut avec cette information.** Le code reste disponible sous licence MIT pour ceux qui souhaitent le forker ou s'en inspirer.
+
+# Why this project is archived
+
+Several factors motivated the decision to stop development:
+
+- **Military investments**: Daniel Ek, Spotify's founder, is chairman of [Helsing](https://www.helsing.ai/), a German military AI company in which he has personally invested. Helsing has contracts with Rheinmetall, Saab and Airbus — companies involved in arms deliveries to Israel. ([Les Inrocks](https://www.lesinrocks.com/musique/le-pdg-de-spotify-investit-600-millions-deuros-dans-larmement-677863-04-08-2025/), [Le Figaro](https://www.lefigaro.fr/musique/fuck-spotify-les-investissements-de-daniel-ek-dans-le-secteur-de-l-armement-font-enrager-artistes-et-abonnes-20250730))
+
+- **ICE recruitment ads**: In October 2025, Spotify ran recruitment ads for the U.S. Immigration and Customs Enforcement (ICE), refusing to modify its advertising policy afterward. ([The Guardian](https://www.theguardian.com/technology/2026/jan/09/spotify-no-longer-running-ice-recruitment-ads-after-us-government-campaign-ends))
+
+- **Israeli prison advertisements**: Spotify ran advertisements for the Israeli prison system, under the supervision of Minister Itamar Ben-Gvir.
+
+- **Partnership with Partner Communications**: Spotify launched in Israel through an agreement with this company listed in the UN database for its involvement in illegal settlements.
+
+To learn more : [BDS Movement – Boycott Spotify](https://bdsmovement.net/boycott-spotify) · [Reddit r/spotify](https://www.reddit.com/r/spotify/comments/1ll26zd/spotifys_blood_money_funding_death_with_art/) 
+
+**Each person can do what they want with this information.** The code remains available under the MIT license for those who wish to fork it or draw inspiration from it.

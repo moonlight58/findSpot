@@ -56,6 +56,7 @@ bool spotify_skip_previous_playback(SpotifyToken *token, const char *device_id) 
                 ENDPOINT_PLAYER_PREVIOUS, device_id);
     } else {
         snprintf(url, sizeof(url), ENDPOINT_PLAYER_PREVIOUS);
+        
     }
 
     return spotify_api_post_empty(token, url);
